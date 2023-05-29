@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="test.LandingPage_Test">
+        <methods>
+          <include name="browser_call"/>
+          <include name="five_seater_capacity"/>
+          <include name="just_launched_show_price_in_my_city"/>
+          <include name="cng"/>
+          <include name="just_launched_scroller_right"/>
+          <include name="upcoming"/>
+          <include name="hybrid"/>
+          <include name="seven_seater_capacity"/>
+          <include name="sedan"/>
+          <include name="view_all_popularCars"/>
+          <include name="petrol"/>
+          <include name="view_more_brands"/>
+          <include name="convertiable"/>
+          <include name="automatic"/>
+          <include name="popular_price_in_my_city"/>
+          <include name="luxrycars"/>
+          <include name="electric"/>
+          <include name="body_type_plus_suv"/>
+          <include name="car_under_5_lakh"/>
+        </methods>
+      </class> <!-- test.LandingPage_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
