@@ -157,9 +157,10 @@ public class Landing_Page_Actions extends CarwaleBaseFile{
 		Thread.sleep(2000);
 		WebElement city = driver.findElement(By.xpath("//span[text()='Bangalore']"));
 		city.click();
-		WebElement close_button = driver.findElement(By.xpath("//span[@aria-label='Close Popup']"));
-		action.moveToElement(close_button).perform();
-		close_button.click();
+		Thread.sleep(9000);
+//		WebElement close_button = driver.findElement(By.xpath("(//span[@aria-label='Close Popup'])[2]"));
+//		action.moveToElement(close_button).perform();
+//		close_button.click();
 		WebElement on_road_price_city = driver.findElement(By.xpath("//div[@data-lang-id='pricetype_with_city']"));
 		String on_road_price_city_text= on_road_price_city.getText();
 		Assert.assertEquals(on_road_price_city_text, "On-Road Price, Bangalore");
@@ -179,23 +180,29 @@ public class Landing_Page_Actions extends CarwaleBaseFile{
 	}
 
 	public void just_launched() {
+		
+		WebElement featured_cars_text = driver.findElement(By.xpath("//h2[text()='Featured  Cars']"));
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);",featured_cars_text );
+		
+		
 		WebElement just_launched_text = driver.findElement(By.xpath("//span[text()='JUST LAUNCHED']"));
 		just_launched_text.click();
 
-		WebElement first_car_show_price_button = driver.findElement(By.xpath("(//button[text()='View Price Breakup'])[10]"));
+		WebElement first_car_show_price_button = driver.findElement(By.xpath("(//div[text()='View Price Breakup'])[10]"));
 		first_car_show_price_button.click();
-		WebElement mumbai_city = driver.findElement(By.xpath("//span[text()='Banglore']"));
-		mumbai_city.click();
-		WebElement close_button = driver.findElement(By.xpath("(//span[@role='button' and @aria-label='Close Popup'])[2]"));
-		close_button.click();
+//		WebElement mumbai_city = driver.findElement(By.xpath("//span[text()='Mumbai']"));
+//		mumbai_city.click();
+//		WebElement close_button = driver.findElement(By.xpath("(//span[@role='button' and @aria-label='Close Popup'])[2]"));
+//		close_button.click();
 		//
-		WebElement on_road_price_city = driver.findElement(By.xpath("//div[@data-lang-id='pricetype_with_city']"));
+		WebElement on_road_price_city = driver.findElement(By.xpath("//span[@data-lang-id='pricetype_in_city']"));
 		String on_road_price_city_text= on_road_price_city.getText();
-		Assert.assertEquals(on_road_price_city_text, "On-Road Price, Banglore");
+		Assert.assertEquals(on_road_price_city_text, "On Road Price in Bangalore");
+		driver.navigate().to("url");
 
 	}
 	public void just_launched_scroller_right() throws InterruptedException {
-		driver.navigate().back();
+		
 		WebElement just_launched_text = driver.findElement(By.xpath("//span[text()='JUST LAUNCHED']"));
 		just_launched_text.click();
 		WebElement just_launched_car_right_scroll_button_right = driver.findElement(By.xpath("(//div[@data-direction='right'])[2]"));

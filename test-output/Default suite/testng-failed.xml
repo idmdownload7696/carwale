@@ -5,10 +5,22 @@
     <classes>
       <class name="test.LandingPage_Test">
         <methods>
-          <include name="browser_call"/>
+          <include name="featured_car_popular_scroller_right"/>
           <include name="five_seater_capacity"/>
-          <include name="just_launched_show_price_in_my_city"/>
           <include name="cng"/>
+          <include name="skoda_brand"/>
+          <include name="tata_brand"/>
+          <include name="search_bar"/>
+          <include name="find_right_used_car_search1"/>
+          <include name="upcomming_scroller_right"/>
+          <include name="view_all_upcoming_Cars"/>
+          <include name="convertiable"/>
+          <include name="language"/>
+          <include name="brand_logo"/>
+          <include name="car_under_5_lakh"/>
+          <include name="browser_call"/>
+          <include name="location"/>
+          <include name="just_launched_show_price_in_my_city"/>
           <include name="just_launched_scroller_right"/>
           <include name="upcoming"/>
           <include name="hybrid"/>
@@ -16,14 +28,14 @@
           <include name="sedan"/>
           <include name="view_all_popularCars"/>
           <include name="petrol"/>
+          <include name="find_right_new_car_search"/>
           <include name="view_more_brands"/>
-          <include name="convertiable"/>
           <include name="automatic"/>
           <include name="popular_price_in_my_city"/>
+          <include name="view_all_newly_launched_Cars"/>
           <include name="luxrycars"/>
           <include name="electric"/>
           <include name="body_type_plus_suv"/>
-          <include name="car_under_5_lakh"/>
         </methods>
       </class> <!-- test.LandingPage_Test -->
     </classes>
